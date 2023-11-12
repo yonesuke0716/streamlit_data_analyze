@@ -21,11 +21,11 @@ def main():
     exp_path = sorted(exp_path)
 
     # 変更前のexperimentフォルダの選択
-    exp_name_before = st.sidebar.selectbox("変更前", exp_path)
+    exp_name_before = st.sidebar.selectbox("変更前", exp_path, index=0)
     exp_path_before = f"{exp_folder}/{exp_name_before}"
 
     # 変更後のexperimentフォルダの選択
-    exp_name_after = st.sidebar.selectbox("変更後", exp_path)
+    exp_name_after = st.sidebar.selectbox("変更後", exp_path, index=1)
     exp_path_after = f"{exp_folder}/{exp_name_after}"
 
     col1, col2 = st.columns(2)
